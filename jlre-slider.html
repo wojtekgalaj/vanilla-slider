@@ -11,19 +11,15 @@
   </head>
 
   <body>
-    <div
-      id="youtube-player-1"
-      style="width: 100vw; height: 100vh; background: red;"
-    ></div>
-    <div id="wbn-slider" style="display: none;">
-      <div class="wbn-slide">
+    <div id="jlre-slider">
+      <div class="jlre-slide">
         <img src="img/slide1_unsplash.jpg" />
       </div>
-      <div class="wbn-slide">
+      <div class="jlre-slide">
         <img src="img/slide2_unsplash.jpg" />
-        <div class="wbn-overlay-text">
-          <span class="wbn-header">HEADER TEST</span>
-          <span class="wbn-text">
+        <div class="jlre-overlay-text">
+          <span class="jlre-header">HEADER TEST</span>
+          <span class="jlre-text">
             Fusce pellentesque dui blandit, tristique lectus id, pulvinar lacus.
             Suspendisse potenti. Aliquam in varius magna. Sed eleifend suscipit
             eros, non consectetur enim varius quis. Sed semper semper lacus nec
@@ -31,25 +27,30 @@
           </span>
         </div>
       </div>
-      <div class="wbn-slide active"><img src="img/slide3_unsplash.jpg" /></div>
-      <div class="wbn-slide"><img src="img/slide4_unsplash.jpg" /></div>
-      <div class="wbn-slide"><img src="img/slide5_unsplash.jpg" /></div>
-      <div class="wbn-slide">
-        <div class="video-container"></div>
+      <div class="jlre-slide active"><img src="img/slide3_unsplash.jpg" /></div>
+      <div class="jlre-slide"><img src="img/slide4_unsplash.jpg" /></div>
+      <div class="jlre-slide"><img src="img/slide5_unsplash.jpg" /></div>
+      <div class="jlre-slide">
+        <div class="video-container">
+          <div
+            id="youtube-player-1"
+            style="width: 100vw; height: 100vh; background: red;"
+          ></div>
+        </div>
       </div>
 
-      <div class="wbn-buttons">
-        <div class="wbn-slider-back-btn">
+      <div class="jlre-buttons">
+        <div class="jlre-slider-back-btn">
           <span>◀</span>
         </div>
 
-        <div class="wbn-slider-next-btn">
+        <div class="jlre-slider-next-btn">
           <span>▶</span>
         </div>
       </div>
     </div>
     <!-- Import the Slider -->
-    <script src="src/wbn-slider.js"></script>
+    <script src="src/jlre-slider.js"></script>
     <script src="src/youtube-player.js"></script>
   </body>
 </html>

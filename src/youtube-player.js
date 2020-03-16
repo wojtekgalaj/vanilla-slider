@@ -1,4 +1,4 @@
-(function(window) {
+(function(win) {
   console.log("script running");
 
   const tag = document.createElement("script");
@@ -21,13 +21,13 @@
     });
   }
   function onPlayerReady(event) {
-    event.target.playVideo();
+    /* event.target.playVideo(); */
   }
   function onPlayerStateChange(event) {
     console.log("on player state change ", event);
   }
 
-  window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
-  window.onPlayerReady = onPlayerReady;
-  window.onPlayerStateChange = onPlayerStateChange;
+  win.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+  win.onPlayerReady = onPlayerReady;
+  win.onPlayerStateChange = onPlayerStateChange;
 })(window);

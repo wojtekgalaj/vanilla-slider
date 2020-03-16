@@ -1,0 +1,15 @@
+{
+  "name": "vanilla-slider",
+  "version": "1.0.0",
+  "description": "Simple slider with youtube support",
+  "main": "index.js",
+  "author": "Wojtek G <wojtek.galaj@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
