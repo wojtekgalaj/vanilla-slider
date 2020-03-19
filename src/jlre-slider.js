@@ -1,4 +1,65 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Youtube player bit
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName("script")[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  let players = [];
+  let videoIds = [];
+
+  function onYouTubeIframeAPIReady() {
+    const playerContainers = document.getElementsByClassName("youtube-video");
+
+    if (playerContainers.length !== videoIds.length) {
+      conosole.error(
+        "The number of video containers and the ids you have passed in don't match"
+      );
+      return;
+    }
+
+    console.log("length ", playerContainers.length);
+    for (let i = 0; i < playerContainers.length; i++) {
+      const container = playerContainers[i];
+      const containerParent = container.parentNode;
+      const clientRect = containerParent.getBoundingClientRect();
+
+      const player = new YT.Player(container, {
+        videoId: videoIds[i],
+        heigth: clientRect.height + "",
+        width: clientRect.width + "",
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        }
+      });
+      players.push(player);
+    }
+  }
+
+  function stopAllPlayers() {
+    players.forEach(player => {
+      player.stopVideo();
+    });
+  }
+  function onPlayerReady(event) {
+    /* event.target.playVideo(); */
+    console.log("on player reasy ", event);
+  }
+  function onPlayerStateChange(event) {
+    console.log("on player state change ", event);
+  }
+
+  function initPlayers(ids) {
+    videoIds = ids;
+  }
+
+  window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+  window.onPlayerReady = onPlayerReady;
+  window.onPlayerStateChange = onPlayerStateChange;
+  window.initPlayers = initPlayers;
+
+  // Slider bit
+
   // CHANGE ONLY THIS
   const SLIDETIME = 500; //ms
   // --------------------------
@@ -26,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function changeSlide(forward) {
     if (clickable) {
       clickable = false;
+      stopAllPlayers();
       active = document.querySelector(".active");
       const activeSlideIndex = allSlides.indexOf(active);
 
