@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const SLIDETIME = 500; //ms
   // --------------------------
 
-  const backButton = document.querySelector(".jlre-slider-back-btn");
-  const forwardButton = document.querySelector(".jlre-slider-next-btn");
+  const backButton = document.querySelector(".vanilla-slider-back-btn");
+  const forwardButton = document.querySelector(".vanilla-slider-next-btn");
   // Select all slides and convert node to array for easy handling
-  // const allSlides = Array.from(document.querySelectorAll('.jlre-slide'));
-  const allSlides = [...document.querySelectorAll(".jlre-slide")];
+  // const allSlides = Array.from(document.querySelectorAll('.vanilla-slide'));
+  const allSlides = [...document.querySelectorAll(".vanilla-slide")];
   let clickable = true;
   let active = null;
   let newActive = null;
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (slide === active && !clickable) {
         clickable = true;
         // Remove all CSS animation classes on old active
-        active.className = "jlre-slide";
+        active.className = "vanilla-slide";
       }
     });
   });

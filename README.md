@@ -21,7 +21,7 @@ style/style.css
 the js file is at 
 
 ``` sh
-src/jlre-slider.js
+src/vanilla-slider.js
 ```
 
 add both of those to the page where you'd like to use this slider.
@@ -32,22 +32,22 @@ to minimise it blocking the rendering.
 ## Markup
 
 The whole slider needs to go inside an element (probably a layer 'div') with an
-id of "jlre-slider"
+id of "vanilla-slider"
 
-Each of the slides needs a **jlre-slide** class on it.
+Each of the slides needs a **vanilla-slide** class on it.
 
 The first slide should also have an **active** class which will make it visible.
 
 After all of the slides there needs to be a diff with a class of
-**jlre-buttons** with 2 divs inside. The content of the divs can be whatever.
+**vanilla-buttons** with 2 divs inside. The content of the divs can be whatever.
 
 ``` html
-      <div class="jlre-buttons">
-        <div class="jlre-slider-back-btn">
+      <div class="vanilla-buttons">
+        <div class="vanilla-slider-back-btn">
           <span>◀</span>
         </div>
 
-        <div class="jlre-slider-next-btn">
+        <div class="vanilla-slider-next-btn">
           <span>▶</span>
         </div>
       </div>
@@ -71,7 +71,7 @@ to the bottom of the page:
 </script>
 ```
 
-The scrip in jlre-slider.js exposes this global method called **initPlayer**
+The scrip in vanilla-slider.js exposes this global method called **initPlayer**
 that expects an array of youtube video ids. There needs to be an element in the
 dom for each one of the videos. If the number of ids and dom elements doesn't
 match, an error will be shown in the console and video will not play.

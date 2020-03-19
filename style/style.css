@@ -3,20 +3,20 @@ body {
   padding: 0;
 }
 
-#jlre-slider {
+#vanilla-slider {
   position: relative;
   height: 40vw;
   overflow: hidden;
 }
 
-.jlre-slide {
+.vanilla-slide {
   position: absolute;
   width: 100%;
   z-index: 500;
   height: 100%;
 }
 
-.jlre-slide img {
+.vanilla-slide img {
   object-fit: cover;
   width: 100%;
   pointer-events: none;
@@ -62,7 +62,7 @@ body {
   }
 }
 
-.jlre-buttons {
+.vanilla-buttons {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -74,8 +74,8 @@ body {
   pointer-events: none;
 }
 
-.jlre-slider-back-btn,
-.jlre-slider-next-btn {
+.vanilla-slider-back-btn,
+.vanilla-slider-next-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,14 +91,14 @@ body {
   pointer-events: all;
 }
 
-.jlre-slider-back-btn:hover,
-.jlre-slider-next-btn:hover {
+.vanilla-slider-back-btn:hover,
+.vanilla-slider-next-btn:hover {
   transform: scale(1.1);
   opacity: 0.8;
   cursor: pointer;
 }
 
-.jlre-overlay-text {
+.vanilla-overlay-text {
   position: absolute;
   display: flex;
   display: -ms-flexbox;
@@ -115,13 +115,13 @@ body {
   opacity: 1;
 }
 
-.jlre-overlay-text .jlre-header {
+.vanilla-overlay-text .vanilla-header {
   font-family: 'Chivo', sans-serif;
   font-size: 80px;
   font-weight: 800;
 }
 
-.jlre-overlay-text .jlre-text {
+.vanilla-overlay-text .vanilla-text {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 22px;
