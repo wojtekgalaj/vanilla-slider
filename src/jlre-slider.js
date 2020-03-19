@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const playerContainers = document.getElementsByClassName("youtube-video");
 
     if (playerContainers.length !== videoIds.length) {
-      conosole.error(
+      console.error(
         "The number of video containers and the ids you have passed in don't match"
       );
       return;
